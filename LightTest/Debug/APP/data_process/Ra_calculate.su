@@ -1,0 +1,4 @@
+../APP/data_process/Ra_calculate.c:8:5:Calcute_Ra	7056	static
+../APP/data_process/Ra_calculate.c:193:6:My_Getdata_test	40	static
+../APP/data_process/Ra_calculate.c:235:6:Device_Init	8	static
+../APP/data_process/Ra_calculate.c:246:7:TemCalculate	56	static
