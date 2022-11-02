@@ -64,14 +64,16 @@ int Calcute_Ra(light_t *handle)
         float tmp;
         for(uint8_t i = 0; i < 81; i++)
         {
-            tmp = c_2 / ((380 + 5 * i) * ATTRS.cdc);
+            tmp = c_2 / (((380 + 5 * i) * (1e-9)) * ATTRS.cdc);
+            tmp = pow(value_e, tmp);
             ref_light.spectral_sta[i] = c_1 * ((380 + 5 * i) * (1e-14)) / (tmp - 1);
         }
     }
     else
     {
         /*spectral of reference light should be Sd*/
-        float M_1, M_2, tmp = 1000 / ATTRS.cdc;
+        float M_1 = 0, M_2 = 0;
+        float tmp = 1000.0 / (float)(ATTRS.cdc);
         float x_d = 0, y_d = 0;
         if((ATTRS.cdc >= 5000) && (ATTRS.cdc <= 7000))
             x_d = (-4.6070) * (tmp*tmp*tmp) + 2.9678 * (tmp*tmp) + 0.09911 * tmp + 0.244063;

@@ -1,7 +1,7 @@
 Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c \
- D:/my_own_file/LightTest/LightTest/BSP/bsp_includes.h \
- D:/my_own_file/LightTest/LightTest/BSP/AS7341_Driver/Waveshare_AS7341.h \
- D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/bsp_includes.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/AS7341_Driver/Waveshare_AS7341.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/DEV_Config.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -28,17 +28,16 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/main.h ../Core/Inc/usart.h ../Core/Inc/main.h \
  ../Core/Inc/i2c.h \
- D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/Debug.h \
- D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/Debug.h \
- D:/my_own_file/LightTest/LightTest/APP/app_includes.h \
- D:/my_own_file/LightTest/LightTest/APP/test.h \
- D:/my_own_file/LightTest/LightTest/APP/data_process/Ra_calculate.h \
- D:/my_own_file/LightTest/LightTest/APP/test.h \
- D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/DEV_config.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/Debug.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/Debug.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/app_includes.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/test.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/data_process/Ra_calculate.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/test.h \
  ../Core/Inc/stm32f1xx_it.h
-D:/my_own_file/LightTest/LightTest/BSP/bsp_includes.h:
-D:/my_own_file/LightTest/LightTest/BSP/AS7341_Driver/Waveshare_AS7341.h:
-D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/bsp_includes.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/AS7341_Driver/Waveshare_AS7341.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/DEV_Config.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -67,11 +66,10 @@ D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/main.h:
 ../Core/Inc/i2c.h:
-D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/Debug.h:
-D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/Debug.h:
-D:/my_own_file/LightTest/LightTest/APP/app_includes.h:
-D:/my_own_file/LightTest/LightTest/APP/test.h:
-D:/my_own_file/LightTest/LightTest/APP/data_process/Ra_calculate.h:
-D:/my_own_file/LightTest/LightTest/APP/test.h:
-D:/my_own_file/LightTest/LightTest/BSP/DEV_Config/DEV_config.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/Debug.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/BSP/DEV_Config/Debug.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/app_includes.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/test.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/data_process/Ra_calculate.h:
+/home/budali11/git_download/AS7341-Optical-sensors/LightTest/APP/test.h:
 ../Core/Inc/stm32f1xx_it.h:

@@ -19,7 +19,7 @@
 #define ASTEP 999
 #define AGAIN 6
 #define GAIN (pow(2, AGAIN))
-#define ITIME ((ATIME + 1) * (ASTEP + 1) * 2.78)
+#define ITIME ((ATIME + 1) * (ASTEP + 1) * 2.78 * 1000000)
 
 const float value_e = 2.718281828;
 const uint16_t lamda_value[9] = {410, 440, 470, 510, 550, 583, 620, 670, 750};

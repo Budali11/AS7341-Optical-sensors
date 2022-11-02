@@ -64,8 +64,8 @@ all: main-build
 main-build: LightTest.elf secondary-outputs
 
 # Tool invocations
-LightTest.elf LightTest.map: $(OBJS) $(USER_OBJS) D:\my_own_file\LightTest\LightTest\STM32F103ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LightTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\my_own_file\LightTest\LightTest\STM32F103ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LightTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LightTest.elf LightTest.map: $(OBJS) $(USER_OBJS) /home/budali11/git_download/AS7341-Optical-sensors/LightTest/STM32F103ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LightTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/budali11/git_download/AS7341-Optical-sensors/LightTest/STM32F103ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LightTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

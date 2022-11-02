@@ -38,34 +38,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := LightTest
+BUILD_ARTIFACT_NAME := Light_Ra
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-LightTest.elf \
+Light_Ra.elf \
 
 MAP_FILES += \
-LightTest.map \
+Light_Ra.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-LightTest.list \
+Light_Ra.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: LightTest.elf secondary-outputs
+main-build: Light_Ra.elf secondary-outputs
 
 # Tool invocations
-LightTest.elf LightTest.map: $(OBJS) $(USER_OBJS) F:\Cubemx\PRJ\backup\LightTest\LightTest\LightTest\STM32F103ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LightTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"F:\Cubemx\PRJ\backup\LightTest\LightTest\LightTest\STM32F103ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LightTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Light_Ra.elf Light_Ra.map: $(OBJS) $(USER_OBJS) /home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/STM32F103ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Light_Ra.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/STM32F103ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Ra.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -74,14 +74,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-LightTest.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "LightTest.list"
+Light_Ra.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Light_Ra.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) LightTest.elf LightTest.list LightTest.map default.size.stdout
+	-$(RM) Light_Ra.elf Light_Ra.list Light_Ra.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

@@ -17,7 +17,7 @@
 #include "Waveshare_AS7341.h"
 #include "math.h"
 #include "test.h"
-#include "DEV_config.h"
+#include "DEV_Config.h"
 
 typedef struct __light_attrib
 {

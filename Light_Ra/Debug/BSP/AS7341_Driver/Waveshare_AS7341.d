@@ -1,6 +1,6 @@
 BSP/AS7341_Driver/Waveshare_AS7341.o: \
  ../BSP/AS7341_Driver/Waveshare_AS7341.c \
- F:/Cubemx/PRJ/backup/LightTest/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/BSP/DEV_Config/DEV_Config.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -27,9 +27,9 @@ BSP/AS7341_Driver/Waveshare_AS7341.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/main.h ../Core/Inc/usart.h ../Core/Inc/main.h \
  ../Core/Inc/i2c.h \
- F:/Cubemx/PRJ/backup/LightTest/LightTest/LightTest/BSP/DEV_Config/Debug.h \
+ /home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/BSP/DEV_Config/Debug.h \
  ../BSP/AS7341_Driver/Waveshare_AS7341.h
-F:/Cubemx/PRJ/backup/LightTest/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h:
+/home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/BSP/DEV_Config/DEV_Config.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -58,5 +58,5 @@ F:/Cubemx/PRJ/backup/LightTest/LightTest/LightTest/BSP/DEV_Config/DEV_Config.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/main.h:
 ../Core/Inc/i2c.h:
-F:/Cubemx/PRJ/backup/LightTest/LightTest/LightTest/BSP/DEV_Config/Debug.h:
+/home/budali11/git_download/AS7341-Optical-sensors/Light_Ra/BSP/DEV_Config/Debug.h:
 ../BSP/AS7341_Driver/Waveshare_AS7341.h:
