@@ -45,6 +45,66 @@ static float WUV_r[][3] =
 
 void Make_Spectral_Standard(light_attrib_t *attrib)
 {
+	/* channel1 390nm ~ 440nm. center wavelenth:415nm */
+	/* divide to 11 parts */
+	for(uint8_t i = 0; i < 11; i++)//channel1 start from 390nm
+	{
+		attrib->spectral_sta[i+2] += divide_2_11[i] * attrib->spectral[0];
+	}
+
+	/* channel2 415nm ~ 475nm. center wavelenth:445nm */
+	/* divide to 13 parts */
+	for(uint8_t i = 0; i < 13; i++)
+	{
+		attrib->spectral_sta[i+7] += divide_2_13[i] * attrib->spectral[1];
+	}
+
+	/* channel3 445nm ~ 515nm. center wavelenth:480nm */
+	/* divide to 15 parts */
+	for(uint8_t i = 0; i < 15; i++)
+	{
+		attrib->spectral_sta[i+13] += divide_2_15[i] * attrib->spectral[2];
+	}
+
+	/* channel4 475nm ~ 555nm. center wavelenth:520nm */
+	/* divide to 17 parts */
+	for(uint8_t i = 0; i < 17; i++)
+	{
+		attrib->spectral_sta[i+19] += divide_2_17[i] * attrib->spectral[3];
+	}
+
+	/* channel5 515nm ~ 595nm. center wavelenth:555nm */
+	/* divide to 17 parts */
+	for(uint8_t i = 0; i < 17; i++)
+	{
+		attrib->spectral_sta[i+27] += divide_2_17[i] * attrib->spectral[4];
+	}
+
+
+	/* channel6 550nm ~ 630nm. center wavelenth:590nm */
+	/* divide to 17 parts */
+	for(uint8_t i = 0; i < 17; i++)
+	{
+		attrib->spectral_sta[i+34] += divide_2_17[i] * attrib->spectral[5];
+	}
+
+
+	/* channel7 580nm ~ 680nm. center wavelenth:630nm */
+	/* divide to 21 parts */
+	for(uint8_t i = 0; i < 21; i++)
+	{
+		attrib->spectral_sta[i+40] += divide_2_21[i] * attrib->spectral[6];
+	}
+
+
+	/* channel8 630nm ~ 730nm. center wavelenth:680nm */
+	/* divide to 21 parts */
+	for(uint8_t i = 0; i < 21; i++)
+	{
+		attrib->spectral_sta[i+50] += divide_2_21[i] * attrib->spectral[7];
+	}
+
+
 
 }
 
@@ -61,12 +121,12 @@ int Calcute_Ra(light_t *handle)
     {
         /*spectral of reference light should be Sp*/
         /*calculate reference light source power distribution function*/
-        float tmp;
+        double tmp;
         for(uint8_t i = 0; i < 81; i++)
         {
-            tmp = c_2 / (((380 + 5 * i) * (1e-9)) * ATTRS.cdc);
+            tmp = c_2 / (((380 + 5 * i) * (1e-9)) * (double)(ATTRS.cdc));
             tmp = pow(value_e, tmp);
-            ref_light.spectral_sta[i] = c_1 * ((380 + 5 * i) * (1e-14)) / (tmp - 1);
+            ref_light.spectral_sta[i] = c_1 * pow((380 + 5 * i) * (1e-9), -5.0F) * pow(tmp - 1, -1.0F);
         }
     }
     else
@@ -280,7 +340,8 @@ void My_Getdata_test(light_t *handle)
     handle->light_attrs.spectral[7] = (handle->pdata2->channel8) / (ITIME * GAIN);
     handle->light_attrs.spectral[8] = (handle->pdata1->CLEAR) / (ITIME * GAIN);
     handle->light_attrs.spectral[9] = (handle->pdata1->NIR) / (ITIME * GAIN);
-    
+
+    Make_Spectral_Standard(&(handle->light_attrs));
 }
 
 void Device_Init(void)
@@ -289,6 +350,7 @@ void Device_Init(void)
 	AS7341_ATIME_config(ATIME);
 	AS7341_ASTEP_config(ASTEP);
 	AS7341_AGAIN_config(AGAIN);
+	AS7341_ReadITIME();
 	AS7341_EnableLED(false);// LED Enable
     AS7341_ControlLed(true,10);//Turn on or off the LED and set the brightness of the LED
 	

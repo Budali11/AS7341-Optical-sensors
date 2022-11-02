@@ -1,5 +1,5 @@
-../APP/data_process/Ra_calculate.c:46:6:Make_Spectral_Standard	16	static
-../APP/data_process/Ra_calculate.c:51:5:Calcute_Ra	6864	static
-../APP/data_process/Ra_calculate.c:244:6:My_Getdata_test	40	static
-../APP/data_process/Ra_calculate.c:286:6:Device_Init	8	static
-../APP/data_process/Ra_calculate.c:297:7:TemCalculate	56	static
+../APP/data_process/Ra_calculate.c:46:6:Make_Spectral_Standard	40	static
+../APP/data_process/Ra_calculate.c:111:5:Calcute_Ra	6872	static
+../APP/data_process/Ra_calculate.c:304:6:My_Getdata_test	40	static
+../APP/data_process/Ra_calculate.c:347:6:Device_Init	8	static
+../APP/data_process/Ra_calculate.c:359:7:TemCalculate	56	static

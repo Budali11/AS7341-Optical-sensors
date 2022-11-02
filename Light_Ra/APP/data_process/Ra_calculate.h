@@ -43,6 +43,7 @@ typedef struct __light
 }light_t;
 
 
+void Make_Spectral_Standard(light_attrib_t *attrib);
 int Calcute_Ra(light_t *handle);
 void My_Getdata_test(light_t *handle);
 void Device_Init(void);

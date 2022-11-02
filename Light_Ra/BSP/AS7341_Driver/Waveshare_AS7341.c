@@ -646,3 +646,22 @@ void AS7341_disableALL()
 {
 	AS7341_Write_Byte(AS7341_ENABLE ,0x02);
 }
+
+/***my function***/
+/******************************************************************************
+function:	read ITIME
+info：
+******************************************************************************/
+uint32_t AS7341_ReadITIME(void)
+{
+	uint32_t ret = 0;
+	ret |= AS7341_Read_Byte(AS7341_ITIMEH);
+	ret <<= 8;
+	ret |= AS7341_Read_Byte(AS7341_ITIMEM);
+	ret <<= 8;
+	ret |= AS7341_Read_Byte(AS7341_ITIMEL);
+
+	return ret;
+}
+
+

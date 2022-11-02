@@ -20,6 +20,9 @@
 #define AS7341_ENABLE      (0X80)
 #define AS7341_ATIME       (0X81)
 #define AS7341_WTIME       (0X83)
+#define AS7341_ITIMEL      (0X63)
+#define AS7341_ITIMEM      (0X64)
+#define AS7341_ITIMEH      (0X65)
 
 #define AS7341_SP_TH_L_LSB (0X84)
 #define AS7341_SP_TH_L_MSB (0X85)
@@ -171,4 +174,5 @@ void AS7341_SetInterruptPersistence(UBYTE value);
 void AS7341_SetSpectralThresholdChannel(UBYTE value);
 void AS7341_SynsINT_sel(void);
 void AS7341_disableALL(void);
+uint32_t AS7341_ReadITIME(void);
 #endif

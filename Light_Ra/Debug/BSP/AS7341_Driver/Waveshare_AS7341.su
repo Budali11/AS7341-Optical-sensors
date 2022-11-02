@@ -32,3 +32,4 @@
 ../BSP/AS7341_Driver/Waveshare_AS7341.c:623:7:AS7341_GetHighThreshold	16	static
 ../BSP/AS7341_Driver/Waveshare_AS7341.c:635:6:AS7341_SynsINT_sel	8	static
 ../BSP/AS7341_Driver/Waveshare_AS7341.c:645:6:AS7341_disableALL	8	static
+../BSP/AS7341_Driver/Waveshare_AS7341.c:655:10:AS7341_ReadITIME	16	static
